@@ -8,7 +8,7 @@ COPY src/ ./
 # Install production dependencies.
 RUN pip install -r requirements.txt
 RUN apt update -y
-RUN apt install git
+RUN apt install git -y
 RUN git clone https://github.com/cryptwareapps/Malware-Database.git
 
 # Run the web service on container startup. Here we use the gunicorn
