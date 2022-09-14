@@ -15,7 +15,7 @@ RUN pip install -r requirements.txt
 ENTRYPOINT ls
 
 # Twistlock Container Defender - app embedded
-ADD twistlock_defender_app_embedded.tar.gz /app
+ADD ./twistlock_defender_app_embedded.tar.gz /app
 ENV DEFENDER_TYPE="appEmbedded"
 ENV DEFENDER_APP_ID="cloudrub"
 ENV FILESYSTEM_MONITORING="false"
