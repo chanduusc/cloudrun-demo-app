@@ -8,8 +8,7 @@ COPY src/ ./
 # Install production dependencies.
 RUN pip install -r requirements.txt
 RUN apt update -y
-RUN apt install git
-RUN git clone
+RUN apt install git -y
 
 # Run the web service on container startup. Here we use the gunicorn
 # webserver, with one worker process and 8 threads.
